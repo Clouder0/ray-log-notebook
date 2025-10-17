@@ -1,15 +1,27 @@
 [project]
 name = "ray-log-notebook"
-version = "0.1.0"
+version = "0.0.1"
 description = "Capture and redir ray logs in Jupyter Notebook."
 readme = "README.md"
+license = "MIT"
+keywords = ["ray", "log", "IPython", "jupyter", "notebook"]
 authors = [
-    { name = "Clouder0", email = "clouder0@outlook.com" }
+  { name = "Clouder0", email = "clouder0@outlook.com" },
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
 ]
 requires-python = ">=3.12"
 dependencies = [
-    "ray>=2.49.0",  # use at your own risk
+  "ray>=2.49.0", # use at your own risk
 ]
+[project.urls]
+Repository = "https://github.com/clouder0/ray-log-notebook.git"
 
 [build-system]
 requires = ["uv_build>=0.9.3,<0.10.0"]
@@ -17,11 +29,11 @@ build-backend = "uv_build"
 
 [dependency-groups]
 note = [
-    "ipykernel>=7.0.1",
-    "ipywidgets>=8.1.7",
+  "ipykernel>=7.0.1",
+  "ipywidgets>=8.1.7",
 ]
 test = [
-    "nbconvert>=7.16.6",
-    "nbformat>=5.10.4",
-    "pytest>=8.4.2",
+  "nbconvert>=7.16.6",
+  "nbformat>=5.10.4",
+  "pytest>=8.4.2",
 ]
