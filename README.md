@@ -1,5 +1,8 @@
 # Ray Log Notebook
 
+**After (Fix routing of background thread output when no parent is set explicitly)[https://github.com/ipython/ipykernel/pull/1451], displaying in the latest executed cell would become the default behaviour. The PR is not release up to now(ipykernel 7.0.1) but may come soon.**
+
+
 This is a tiny **FIX** for Ray to display logs under the **last executed cell** instead of **ray.init()** cell.
 
 Q: Why would this happen?\
@@ -45,3 +48,9 @@ await test_print.remote()
 Logs will always go to the last executed cell, instead of where the Ray Tasks are created.
 
 Tested on Python 3.13 and Ray 2.50.0, generally should work but I don't have much time to test.
+
+Related: 
+
+1. [Prints from ray remote are coming in a previous notebook cell](https://github.com/ipython/ipykernel/issues/1370)
+2. [Need public opt-out API for output routing from threads](https://github.com/ipython/ipykernel/issues/1289)
+3. [Fix routing of background thread output when no parent is set explicitly](https://github.com/ipython/ipykernel/pull/1451)
