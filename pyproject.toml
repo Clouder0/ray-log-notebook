@@ -1,14 +1,14 @@
 [project]
 name = "ray-log-notebook"
 version = "0.1.0"
-description = "Add your description here"
+description = "Capture and redir ray logs in Jupyter Notebook."
 readme = "README.md"
 authors = [
     { name = "Clouder0", email = "clouder0@outlook.com" }
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
-    "ray[default]>=2.50.0",
+    "ray>=2.49.0",  # use at your own risk
 ]
 
 [build-system]
@@ -19,4 +19,9 @@ build-backend = "uv_build"
 note = [
     "ipykernel>=7.0.1",
     "ipywidgets>=8.1.7",
+]
+test = [
+    "nbconvert>=7.16.6",
+    "nbformat>=5.10.4",
+    "pytest>=8.4.2",
 ]
