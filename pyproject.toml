@@ -1,0 +1,22 @@
+[project]
+name = "ray-log-notebook"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Clouder0", email = "clouder0@outlook.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "ray[default]>=2.50.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.3,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+note = [
+    "ipykernel>=7.0.1",
+    "ipywidgets>=8.1.7",
+]
